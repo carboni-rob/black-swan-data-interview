@@ -10,21 +10,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmax);
 }
 
 .mainPageLogo {
-  width: 40vmin;
-  margin-bottom: 5vmin;
+  width: 40vmax;
+  margin-bottom: 5vmax;
 }
 
 .mainPageInput {
-  width: 40vmin;
-  margin-bottom: 5vmin;
+  width: 40vmax;
+  margin-bottom: 5vmax;
 }
 
 .mainPageButton {
-  width: 40vmin;
+  width: 40vmax;
   background-color: #ce2a2c;
   border: 2px solid black;
 }
