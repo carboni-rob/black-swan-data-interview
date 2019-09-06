@@ -19,10 +19,12 @@ const App: React.FC = (): JSX.Element => {
 
   async function handleButtonClick(): Promise<any> {
     let userRepos;
+    let userData;
+
     setIsLoading(true);
     try {
       userRepos = await getRepos(username);
-      console.log(userRepos);
+      userData = await getUserData(username);
       setIsLoading(false);
     } catch (error) {
       Modal.error({
