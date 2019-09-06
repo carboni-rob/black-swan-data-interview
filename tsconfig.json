@@ -12,7 +12,7 @@
       "es6",
       "dom"
     ],
-    "module": "es6",
+    "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
     "noImplicitAny": true,
@@ -22,9 +22,13 @@
     "strict": true,
     "target": "esnext",
     "baseUrl": "./src",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
   },
   "include": [
-    "src/*",
+    "src/*"
   ],
   "compileOnSave": false
 }

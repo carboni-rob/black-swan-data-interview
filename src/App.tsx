@@ -3,7 +3,7 @@ import { Input, Tooltip, Icon, Button } from "antd";
 import bsdLogo from "./assets/black_swan_logo.png";
 import "./App.css";
 
-const App: React.FC = () => {
+const App: React.FC = (): JSX.Element => {
   const [isLoading, setIsLoading] = useState(false);
 
   return (
