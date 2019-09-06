@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Input, Tooltip, Icon, Button } from "antd";
+import { Input, Tooltip, Icon, Button, Modal } from "antd";
+import { getRepos, getUserData } from "./api/github-api";
 import bsdLogo from "./assets/black_swan_logo.png";
 import "./App.css";
 
@@ -7,7 +8,6 @@ const App: React.FC = (): JSX.Element => {
   const [isLoading, setIsLoading] = useState(false);
   const [username, setUsername] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect((): void => {
     if (username.length) {
@@ -17,9 +17,23 @@ const App: React.FC = (): JSX.Element => {
     }
   }, [username]);
 
-  const handleButtonClick = (): void => {
+  async function handleButtonClick(): Promise<any> {
+    let userRepos;
     setIsLoading(true);
-  };
+    try {
+      userRepos = await getRepos(username);
+      console.log(userRepos);
+      setIsLoading(false);
+    } catch (error) {
+      Modal.error({
+        title: "Sorry but...",
+        content:
+          "...an error occurred while processing your request. Did you type the right username?"
+      });
+      setIsLoading(false);
+      setUsername("");
+    }
+  }
 
   return (
     <div className="App">
@@ -48,15 +62,10 @@ const App: React.FC = (): JSX.Element => {
           size="large"
           disabled={isButtonDisabled}
           loading={isLoading}
-          onClick={(): void => handleButtonClick()}
+          onClick={(): Promise<any> => handleButtonClick()}
         >
           Look it up for me
         </Button>
-        {errorMessage && (
-          <h2>
-            An error occurred while processing your request: {errorMessage}
-          </h2>
-        )}
       </header>
     </div>
   );
