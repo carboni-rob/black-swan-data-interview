@@ -15,16 +15,23 @@ const App: React.FC = (): JSX.Element => {
           className="mainPageLogo"
         />
         <Input
+          size="large"
           className="mainPageInput"
           placeholder="Enter GitHub username"
           prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />}
           suffix={
-            <Tooltip title="Please make sure you typed the correct username">
+            <Tooltip title="Please make sure you type a correct username">
               <Icon type="info-circle" style={{ color: "rgba(0,0,0,.45)" }} />
             </Tooltip>
           }
         />
-        <Button className="mainPageButton" type="primary" loading={isLoading}>
+        <Button
+          className="mainPageButton"
+          type="primary"
+          size="large"
+          loading={isLoading}
+          onClick={() => setIsLoading(true)}
+        >
           Look it up for me
         </Button>
       </header>

@@ -15,16 +15,26 @@
 
 .mainPageLogo {
   width: 40vmin;
-  margin: 5vmin;
+  margin-bottom: 5vmin;
 }
 
 .mainPageInput {
   width: 40vmin;
-  margin: 5vmin;
+  margin-bottom: 5vmin;
 }
 
 .mainPageButton {
   width: 40vmin;
   background-color: #ce2a2c;
-  border-color: black;
+  border: 2px solid black;
+}
+
+.mainPageButton:hover {
+  background-color: black;
+  border: 2px solid #ce2a2c;
+}
+
+.ant-btn-primary:focus {
+  background-color: #ce2a2c;
+  border: 2px solid black;
 }
