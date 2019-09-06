@@ -7,6 +7,7 @@ const App: React.FC = (): JSX.Element => {
   const [isLoading, setIsLoading] = useState(false);
   const [username, setUsername] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect((): void => {
     if (username.length) {
@@ -15,6 +16,10 @@ const App: React.FC = (): JSX.Element => {
       setIsButtonDisabled(true);
     }
   }, [username]);
+
+  const handleButtonClick = (): void => {
+    setIsLoading(true);
+  };
 
   return (
     <div className="App">
@@ -29,7 +34,7 @@ const App: React.FC = (): JSX.Element => {
           className="mainPageInput"
           placeholder="Enter GitHub username"
           value={username}
-          onChange={e => setUsername(e.target.value)}
+          onChange={(e): void => setUsername(e.target.value)}
           prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />}
           suffix={
             <Tooltip title="Please enter a username to see user's repos and organizations">
@@ -43,10 +48,15 @@ const App: React.FC = (): JSX.Element => {
           size="large"
           disabled={isButtonDisabled}
           loading={isLoading}
-          onClick={() => setIsLoading(true)}
+          onClick={(): void => handleButtonClick()}
         >
           Look it up for me
         </Button>
+        {errorMessage && (
+          <h2>
+            An error occurred while processing your request: {errorMessage}
+          </h2>
+        )}
       </header>
     </div>
   );
