@@ -13,7 +13,7 @@ module.exports = {
     jquery: true,
     node: true,
   },
-  plugins: ['html', '@typescript-eslint', 'react-hooks', 'jest', 'prettier'],
+  plugins: ['@typescript-eslint', 'react-hooks', 'jest', 'prettier'],
   rules: {
     'consistent-return': 'off',
     'import/prefer-default-export': 'off',
