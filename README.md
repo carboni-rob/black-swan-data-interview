@@ -1,6 +1,6 @@
 ## App is deployed at
 
-https://carboni-rob.github.io/black-swan-data-interview/#/info
+https://carboni-rob.github.io/black-swan-data-interview/#
 
 ## To start the app locally
 
