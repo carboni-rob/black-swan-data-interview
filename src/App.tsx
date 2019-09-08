@@ -38,38 +38,32 @@ const App: React.FC = (): JSX.Element => {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img
-          src={bsdLogo}
-          alt="Black Swan Data logo"
-          className="mainPageLogo"
-        />
-        <Input
-          size="large"
-          className="mainPageInput"
-          placeholder="Enter GitHub username"
-          value={username}
-          onChange={(e): void => setUsername(e.target.value)}
-          prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />}
-          suffix={
-            <Tooltip title="Please enter a username to see user's repos and organizations">
-              <Icon type="info-circle" style={{ color: "rgba(0,0,0,.45)" }} />
-            </Tooltip>
-          }
-        />
-        <Button
-          className="mainPageButton"
-          type="primary"
-          size="large"
-          disabled={isButtonDisabled}
-          loading={isLoading}
-          onClick={(): Promise<any> => handleButtonClick()}
-        >
-          Look it up for me
-        </Button>
-      </header>
-    </div>
+    <main className="mainPage">
+      <img src={bsdLogo} alt="Black Swan Data logo" className="mainPageLogo" />
+      <Input
+        size="large"
+        className="mainPageInput"
+        placeholder="Enter GitHub username"
+        value={username}
+        onChange={(e): void => setUsername(e.target.value)}
+        prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />}
+        suffix={
+          <Tooltip title="Please enter a username to see user's repos and organizations">
+            <Icon type="info-circle" style={{ color: "rgba(0,0,0,.45)" }} />
+          </Tooltip>
+        }
+      />
+      <Button
+        className="mainPageButton"
+        type="primary"
+        size="large"
+        disabled={isButtonDisabled}
+        loading={isLoading}
+        onClick={(): Promise<any> => handleButtonClick()}
+      >
+        Look it up for me
+      </Button>
+    </main>
   );
 };
 
