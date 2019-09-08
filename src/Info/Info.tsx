@@ -23,7 +23,7 @@ const Info = (): JSX.Element => {
       {navigateToSearch && <Redirect to="/" />}
       <nav>
         <Button
-          className="mainPageButton"
+          className="customButton"
           type="primary"
           size="large"
           shape="round"

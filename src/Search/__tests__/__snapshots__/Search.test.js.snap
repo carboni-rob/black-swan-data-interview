@@ -76,7 +76,7 @@ exports[`<Search /> should match last snapshot 1`] = `
     src="Octocat.png"
   />
   <button
-    class="ant-btn searchPageButton ant-btn-primary ant-btn-lg"
+    class="ant-btn customButton ant-btn-primary ant-btn-lg"
     disabled=""
     type="button"
   >

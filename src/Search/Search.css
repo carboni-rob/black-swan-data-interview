@@ -30,13 +30,13 @@
   margin-bottom: 5vmax;
 }
 
-.searchPageButton {
+.customButton {
   width: 40vmax;
   background-color: #ce2a2c;
   border: 2px solid black;
 }
 
-.searchPageButton:hover {
+.customButton:hover {
   background-color: black;
   border: 2px solid #ce2a2c;
 }

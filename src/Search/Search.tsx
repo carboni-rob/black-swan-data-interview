@@ -68,7 +68,7 @@ const App: React.FC = (): JSX.Element => {
         className={`ghLogo ${isButtonDisabled && "greyScale"}`}
       />
       <Button
-        className="searchPageButton"
+        className="customButton"
         type="primary"
         size="large"
         disabled={isButtonDisabled}

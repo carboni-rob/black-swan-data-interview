@@ -4,7 +4,7 @@ exports[`<Info /> should match last snapshot 1`] = `
 <div>
   <nav>
     <button
-      class="ant-btn mainPageButton ant-btn-primary ant-btn-round ant-btn-lg"
+      class="ant-btn customButton ant-btn-primary ant-btn-round ant-btn-lg"
       type="button"
     >
       <i
