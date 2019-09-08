@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5e83bd33b30c737f4f56d605dec56ae5",
+    "revision": "a56bfc6d6fac9251992409b741579c30",
     "url": "/carboni-rob/black-swan-data-interview/index.html"
   },
   {
-    "revision": "2a362f42f495ad5d2b94",
+    "revision": "fa45982797b20d131563",
     "url": "/carboni-rob/black-swan-data-interview/static/css/2.8c467cd4.chunk.css"
   },
   {
-    "revision": "cc81097111d4c5f86d61",
+    "revision": "47345730ba4a75b37df4",
     "url": "/carboni-rob/black-swan-data-interview/static/css/main.30e1b4a0.chunk.css"
   },
   {
-    "revision": "2a362f42f495ad5d2b94",
-    "url": "/carboni-rob/black-swan-data-interview/static/js/2.191d0bb5.chunk.js"
+    "revision": "fa45982797b20d131563",
+    "url": "/carboni-rob/black-swan-data-interview/static/js/2.477fd4fc.chunk.js"
   },
   {
-    "revision": "cc81097111d4c5f86d61",
-    "url": "/carboni-rob/black-swan-data-interview/static/js/main.02c9fcd3.chunk.js"
+    "revision": "47345730ba4a75b37df4",
+    "url": "/carboni-rob/black-swan-data-interview/static/js/main.6ff15c88.chunk.js"
   },
   {
     "revision": "a58d582741e64dfec1e7",

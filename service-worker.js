@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/carboni-rob/black-swan-data-interview/precache-manifest.f89d1cad6f5c056d330f219cb2270117.js"
+  "/carboni-rob/black-swan-data-interview/precache-manifest.657579613db751c4dcc9dc5350d89477.js"
 );
 
 self.addEventListener('message', (event) => {
