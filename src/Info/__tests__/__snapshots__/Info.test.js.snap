@@ -84,9 +84,9 @@ exports[`<Info /> should match last snapshot 1`] = `
         class="cardContent"
       >
         <a
-          href="test1/repos/url"
+          href="repo1/repos/url"
         >
-          test1
+          repo1
         </a>
       </div>
     </div>
@@ -101,14 +101,14 @@ exports[`<Info /> should match last snapshot 1`] = `
         class="cardContent"
       >
         <a
-          href="test1/orgs/url"
+          href="org1/orgs/url"
         >
           <img
             alt="1 Organization Avatar"
             class="orgAvatar"
-            src="test1/avatar/url"
+            src="org1/avatar/url"
           />
-          test1
+          org1
         </a>
       </div>
     </div>

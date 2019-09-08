@@ -40,9 +40,9 @@ const Info = (): JSX.Element => {
         <div />
       </nav>
       <main>
-        {userData && <UserCard {...userData.user} />}
+        {userData && userData.user && <UserCard {...userData.user} />}
         {userRepos && <ReposCard repos={userRepos} />}
-        {userData.orgs && <OrgsCard orgs={userData.orgs} />}
+        {userData && userData.orgs && <OrgsCard orgs={userData.orgs} />}
       </main>
     </div>
   );
