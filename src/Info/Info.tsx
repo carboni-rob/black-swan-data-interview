@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Redirect } from "react-router-dom";
 import { Button } from "antd";
+import { Context } from "../Store";
 import Card from "./Card/Card";
 import "./Info.css";
 import bsdLogo from "../assets/black_swan_logo.png";
 
 const Info = (): JSX.Element => {
+  const { store, dispatch } = useContext(Context);
+  const { userRepos } = store;
+  const { userData } = store;
+  console.log(userRepos);
   const [navigateToSearch, setNavigateToSearch] = useState(false);
 
   const handleBackButtonClick = (): void => {

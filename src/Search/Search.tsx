@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Redirect } from "react-router-dom";
 import { Input, Tooltip, Icon, Button, Modal } from "antd";
+import { Context } from "../Store";
 import { getRepos, getUserData } from "../api/github-api";
 import bsdLogo from "../assets/black_swan_logo.png";
 import ghLogo from "../assets/Octocat.png";
 import "./Search.css";
 
 const App: React.FC = (): JSX.Element => {
+  const { store, dispatch } = useContext(Context);
   const [isLoading, setIsLoading] = useState(false);
   const [username, setUsername] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -28,7 +30,8 @@ const App: React.FC = (): JSX.Element => {
     try {
       userRepos = await getRepos(username);
       userData = await getUserData(username);
-      console.log(userData);
+      dispatch({ type: "setUserRepos", payload: userRepos });
+      dispatch({ type: "setUserData", payload: userData });
       setSearchComplete(true);
     } catch (error) {
       Modal.error({
