@@ -28,7 +28,7 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src/*"
+    "src/*", "src/Info/Info.tsx", "src/Search/App.test.tsx"
   ],
   "compileOnSave": false
 }
