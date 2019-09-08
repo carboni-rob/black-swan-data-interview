@@ -2,7 +2,7 @@
   "name": "black-swan-data-interview",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/carboni-rob/black-swan-data-interview",
+  "homepage": "https://carboni-rob.github.io/black-swan-data-interview",
   "dependencies": {
     "@types/react-router-dom": "^4.3.5",
     "antd": "^3.23.1",
