@@ -44,7 +44,11 @@ const App: React.FC = (): JSX.Element => {
   return (
     <section className="mainPage">
       {searchComplete && <Redirect to="/info" />}
-      <img src={bsdLogo} alt="Black Swan Data logo" className="mainPageLogo" />
+      <img
+        src={bsdLogo}
+        alt="Black Swan Data logo"
+        className="searchPageLogo"
+      />
       <Input
         size="large"
         className="mainPageInput"
