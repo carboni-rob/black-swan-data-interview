@@ -25,18 +25,18 @@
   filter: grayscale(100%);
 }
 
-.mainPageInput {
+.searchPageInput {
   width: 40vmax;
   margin-bottom: 5vmax;
 }
 
-.mainPageButton {
+.searchPageButton {
   width: 40vmax;
   background-color: #ce2a2c;
   border: 2px solid black;
 }
 
-.mainPageButton:hover {
+.searchPageButton:hover {
   background-color: black;
   border: 2px solid #ce2a2c;
 }

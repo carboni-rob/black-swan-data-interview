@@ -51,7 +51,7 @@ const App: React.FC = (): JSX.Element => {
       />
       <Input
         size="large"
-        className="mainPageInput"
+        className="searchPageInput"
         placeholder="Enter GitHub username"
         value={username}
         onChange={(e): void => setUsername(e.target.value)}
@@ -64,11 +64,11 @@ const App: React.FC = (): JSX.Element => {
       />
       <img
         src={ghLogo}
-        alt="GitHublogo"
+        alt="GitHub logo"
         className={`ghLogo ${isButtonDisabled && "greyScale"}`}
       />
       <Button
-        className="mainPageButton"
+        className="searchPageButton"
         type="primary"
         size="large"
         disabled={isButtonDisabled}
