@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import React from "react";
-import { render, getAllByPlaceholderText } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { Context } from "../../Store";
 import Search from "../Search";
 
