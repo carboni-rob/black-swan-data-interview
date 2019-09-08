@@ -1,7 +1,13 @@
 import React from "react";
 
+type Repo = {
+  id: number;
+  clone_url: string;
+  name: string;
+};
+
 type Props = {
-  repos: any[];
+  repos: Repo[];
 };
 
 const ReposCard = ({ repos }: Props): JSX.Element => {
@@ -10,7 +16,7 @@ const ReposCard = ({ repos }: Props): JSX.Element => {
       <h2>User Repositories: {repos.length}</h2>
       <div className="cardContent">
         {repos.map(
-          (repo: any): JSX.Element => {
+          (repo: Repo): JSX.Element => {
             return (
               <a href={repo.clone_url} key={repo.id}>
                 {repo.name}
