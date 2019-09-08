@@ -22,7 +22,7 @@ exports[`<UserCard /> should match last snapshot 1`] = `
   </h3>
   <h3>
     Email: 
-    carboni@robertocarboi.it
+    carboni@robertocarboni.it
   </h3>
   <h3>
     Followers: 
