@@ -15,8 +15,6 @@ const Info = (): JSX.Element => {
     setNavigateToSearch(true);
   };
 
-  console.log(userData.orgs);
-
   return (
     <div>
       {navigateToSearch && <Redirect to="/" />}
@@ -72,19 +70,19 @@ const Info = (): JSX.Element => {
         )}
         {userData && (
           <div className="card">
-            <h2>User Organizations:</h2>
-            {userData.orgs.map(
-              (org: any): JSX.Element => {
-                return (
-                  <div className="cardContent" key={org.id}>
-                    <a href={org.url}>
+            <h2>User Organizations: {userData.orgs.length}</h2>
+            <div className="cardContent">
+              {userData.orgs.map(
+                (org: any): JSX.Element => {
+                  return (
+                    <a href={org.url} key={org.id}>
                       <img alt="" src={org.avatar_url} className="orgAvatar" />
                       {org.login}
                     </a>
-                  </div>
-                );
-              }
-            )}
+                  );
+                }
+              )}
+            </div>
           </div>
         )}
       </main>
