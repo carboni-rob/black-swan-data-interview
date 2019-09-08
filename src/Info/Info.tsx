@@ -8,9 +8,7 @@ import bsdLogo from "../assets/black_swan_logo.png";
 
 const Info = (): JSX.Element => {
   const { store, dispatch } = useContext(Context);
-  const { userRepos } = store;
-  const { userData } = store;
-  console.log(userRepos);
+  const { userRepos, userData } = store;
   const [navigateToSearch, setNavigateToSearch] = useState(false);
 
   const handleBackButtonClick = (): void => {

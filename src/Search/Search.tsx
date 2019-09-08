@@ -8,12 +8,11 @@ import ghLogo from "../assets/Octocat.png";
 import "./Search.css";
 
 const App: React.FC = (): JSX.Element => {
-  const { store, dispatch } = useContext(Context);
+  const { dispatch } = useContext(Context);
   const [isLoading, setIsLoading] = useState(false);
   const [username, setUsername] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [searchComplete, setSearchComplete] = useState(false);
-  console.log(store);
 
   useEffect((): void => {
     if (username.length) {
@@ -75,7 +74,7 @@ const App: React.FC = (): JSX.Element => {
         loading={isLoading}
         onClick={(): Promise<any> => searchGitHub()}
       >
-        Look it up for me
+        Search GitHub for me
       </Button>
     </section>
   );
