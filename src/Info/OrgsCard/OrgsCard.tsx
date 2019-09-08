@@ -20,7 +20,11 @@ const OrgsCard = ({ orgs }: Props): JSX.Element => {
           (org: Org): JSX.Element => {
             return (
               <a href={org.url} key={org.id}>
-                <img alt="" src={org.avatar_url} className="orgAvatar" />
+                <img
+                  alt={`${org.id} Organization Avatar`}
+                  src={org.avatar_url}
+                  className="orgAvatar"
+                />
                 {org.login}
               </a>
             );

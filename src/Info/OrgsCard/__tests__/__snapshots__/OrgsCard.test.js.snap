@@ -15,7 +15,7 @@ exports[`<OrgsCard /> should match last snapshot 1`] = `
       href="test1/orgs/url"
     >
       <img
-        alt=""
+        alt="1 Organization Avatar"
         class="orgAvatar"
         src="test1/avatar/url"
       />
@@ -25,7 +25,7 @@ exports[`<OrgsCard /> should match last snapshot 1`] = `
       href="test2/orgs/url"
     >
       <img
-        alt=""
+        alt="2 Organization Avatar"
         class="orgAvatar"
         src="test2/avatar/url"
       />
@@ -35,7 +35,7 @@ exports[`<OrgsCard /> should match last snapshot 1`] = `
       href="test3/orgs/url"
     >
       <img
-        alt=""
+        alt="3 Organization Avatar"
         class="orgAvatar"
         src="test3/avatar/url"
       />

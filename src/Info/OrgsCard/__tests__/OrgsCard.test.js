@@ -32,4 +32,40 @@ describe("<OrgsCard />", () => {
 
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it("should contain a title with the number of organizations", () => {
+    const { getByText } = render(tree);
+
+    getByText("User Organizations: 3");
+  });
+
+  it("should contain a link with appropriate href for each element", () => {
+    const { getByText } = render(tree);
+
+    orgs.map(org => {
+      expect(getByText(org.login)).toHaveProperty(
+        "href",
+        `http://localhost/${org.url}`
+      );
+
+      return false;
+    });
+  });
+
+  it("should contain an image with correct source and class for each element", () => {
+    const { getByAltText } = render(tree);
+
+    orgs.map(org => {
+      expect(getByAltText(`${org.id} Organization Avatar`)).toHaveProperty(
+        "src",
+        `http://localhost/${org.avatar_url}`
+      );
+      expect(getByAltText(`${org.id} Organization Avatar`)).toHaveProperty(
+        "className",
+        "orgAvatar"
+      );
+
+      return false;
+    });
+  });
 });
