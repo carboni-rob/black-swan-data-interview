@@ -28,4 +28,23 @@ describe("<ReposCard />", () => {
 
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it("should contain a title with the number of repositories", () => {
+    const { getByText } = render(tree);
+
+    getByText("User Repositories: 3");
+  });
+
+  it("should contain a link with appropriate href for each element", () => {
+    const { getByText } = render(tree);
+
+    repos.map(repo => {
+      expect(getByText(repo.name)).toHaveProperty(
+        "href",
+        `http://localhost/${repo.clone_url}`
+      );
+
+      return false;
+    });
+  });
 });
