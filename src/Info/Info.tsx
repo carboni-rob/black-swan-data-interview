@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import { Button } from "antd";
 import { Context } from "../Store";
 import OrgsCard from "./OrgsCard/OrgsCard";
+import ReposCard from "./ReposCard/ReposCard";
 import "./Info.css";
 import bsdLogo from "../assets/black_swan_logo.png";
 
@@ -55,22 +56,7 @@ const Info = (): JSX.Element => {
             <h3>Following: {userData.user.following}</h3>
           </div>
         )}
-        {userRepos && (
-          <div className="card">
-            <h2>User Repositories: {userRepos.length}</h2>
-            <div className="cardContent">
-              {userRepos.map(
-                (repo: any): JSX.Element => {
-                  return (
-                    <a href={repo.clone_url} key={repo.id}>
-                      {repo.name}
-                    </a>
-                  );
-                }
-              )}
-            </div>
-          </div>
-        )}
+        {userRepos && <ReposCard repos={userRepos} />}
         {userData.orgs && <OrgsCard orgs={userData.orgs} />}
       </main>
     </div>
