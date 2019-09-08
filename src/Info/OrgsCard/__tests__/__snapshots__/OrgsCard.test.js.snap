@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OrgsCard /> should match last snapshot 1`] = `
+<div
+  class="card"
+>
+  <h2>
+    User Organizations: 
+    3
+  </h2>
+  <div
+    class="cardContent"
+  >
+    <a
+      href="test1/orgs/url"
+    >
+      <img
+        alt=""
+        class="orgAvatar"
+        src="test1/avatar/url"
+      />
+      test1
+    </a>
+    <a
+      href="test2/orgs/url"
+    >
+      <img
+        alt=""
+        class="orgAvatar"
+        src="test2/avatar/url"
+      />
+      test2
+    </a>
+    <a
+      href="test3/orgs/url"
+    >
+      <img
+        alt=""
+        class="orgAvatar"
+        src="test3/avatar/url"
+      />
+      test3
+    </a>
+  </div>
+</div>
+`;
