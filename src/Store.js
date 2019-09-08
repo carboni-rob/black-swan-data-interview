@@ -2,6 +2,11 @@ import React from "react";
 
 export const reducer = (state, action) => {
   switch (action.type) {
+    case "resetState":
+      return {
+        userRepos: [],
+        userData: {}
+      };
     case "setUserRepos":
       return {
         ...state,

@@ -13,6 +13,7 @@ const App: React.FC = (): JSX.Element => {
   const [username, setUsername] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [searchComplete, setSearchComplete] = useState(false);
+  console.log(store);
 
   useEffect((): void => {
     if (username.length) {

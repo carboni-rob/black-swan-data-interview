@@ -14,6 +14,7 @@ const Info = (): JSX.Element => {
   const [navigateToSearch, setNavigateToSearch] = useState(false);
 
   const handleBackButtonClick = (): void => {
+    dispatch({ type: "resetState" });
     setNavigateToSearch(true);
   };
 
