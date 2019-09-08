@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReposCard /> should match last snapshot 1`] = `
+<div
+  class="card"
+>
+  <h2>
+    User Repositories: 
+    3
+  </h2>
+  <div
+    class="cardContent"
+  >
+    <a
+      href="test1/repos/url"
+    >
+      test1
+    </a>
+    <a
+      href="test2/repos/url"
+    >
+      test2
+    </a>
+    <a
+      href="test3/repos/url"
+    >
+      test3
+    </a>
+  </div>
+</div>
+`;
