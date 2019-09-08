@@ -1,7 +1,14 @@
 import React from "react";
 
+type Org = {
+  id: number;
+  login: string;
+  url: string;
+  avatar_url: string;
+};
+
 type Props = {
-  orgs: any[];
+  orgs: Org[];
 };
 
 const OrgsCard = ({ orgs }: Props): JSX.Element => {
@@ -10,7 +17,7 @@ const OrgsCard = ({ orgs }: Props): JSX.Element => {
       <h2>User Organizations: {orgs.length}</h2>
       <div className="cardContent">
         {orgs.map(
-          (org: any): JSX.Element => {
+          (org: Org): JSX.Element => {
             return (
               <a href={org.url} key={org.id}>
                 <img alt="" src={org.avatar_url} className="orgAvatar" />
