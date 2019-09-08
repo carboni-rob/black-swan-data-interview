@@ -4,6 +4,7 @@ import { Button } from "antd";
 import { Context } from "../Store";
 import OrgsCard from "./OrgsCard/OrgsCard";
 import ReposCard from "./ReposCard/ReposCard";
+import UserCard from "./UserCard/UserCard";
 import "./Info.css";
 import bsdLogo from "../assets/black_swan_logo.png";
 
@@ -16,8 +17,6 @@ const Info = (): JSX.Element => {
     dispatch({ type: "resetState" });
     setNavigateToSearch(true);
   };
-
-  console.log(userData.orgs);
 
   return (
     <div>
@@ -41,21 +40,7 @@ const Info = (): JSX.Element => {
         <div />
       </nav>
       <main>
-        {userData && (
-          <div className="card">
-            <h2>User Info:</h2>
-            <img
-              src={userData.user.avatar_url}
-              alt="User Avatar"
-              className="userAvatar"
-            />
-            <h3>User name: {userData.user.name || "not set"}</h3>
-            <h3>Company: {userData.user.company || "not set"}</h3>
-            <h3>Email: {userData.user.email || "not set"}</h3>
-            <h3>Followers: {userData.user.followers}</h3>
-            <h3>Following: {userData.user.following}</h3>
-          </div>
-        )}
+        {userData && <UserCard user={userData.user} />}
         {userRepos && <ReposCard repos={userRepos} />}
         {userData.orgs && <OrgsCard orgs={userData.orgs} />}
       </main>
