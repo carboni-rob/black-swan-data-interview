@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/carboni-rob/black-swan-data-interview/static/css/main.30e1b4a0.chunk.css",
-    "main.js": "/carboni-rob/black-swan-data-interview/static/js/main.6ff15c88.chunk.js",
-    "main.js.map": "/carboni-rob/black-swan-data-interview/static/js/main.6ff15c88.chunk.js.map",
-    "runtime~main.js": "/carboni-rob/black-swan-data-interview/static/js/runtime~main.6508dba6.js",
-    "runtime~main.js.map": "/carboni-rob/black-swan-data-interview/static/js/runtime~main.6508dba6.js.map",
-    "static/css/2.8c467cd4.chunk.css": "/carboni-rob/black-swan-data-interview/static/css/2.8c467cd4.chunk.css",
-    "static/js/2.477fd4fc.chunk.js": "/carboni-rob/black-swan-data-interview/static/js/2.477fd4fc.chunk.js",
-    "static/js/2.477fd4fc.chunk.js.map": "/carboni-rob/black-swan-data-interview/static/js/2.477fd4fc.chunk.js.map",
-    "index.html": "/carboni-rob/black-swan-data-interview/index.html",
-    "precache-manifest.657579613db751c4dcc9dc5350d89477.js": "/carboni-rob/black-swan-data-interview/precache-manifest.657579613db751c4dcc9dc5350d89477.js",
-    "service-worker.js": "/carboni-rob/black-swan-data-interview/service-worker.js",
-    "static/css/2.8c467cd4.chunk.css.map": "/carboni-rob/black-swan-data-interview/static/css/2.8c467cd4.chunk.css.map",
-    "static/css/main.30e1b4a0.chunk.css.map": "/carboni-rob/black-swan-data-interview/static/css/main.30e1b4a0.chunk.css.map",
-    "static/media/Octocat.png": "/carboni-rob/black-swan-data-interview/static/media/Octocat.0ba2aa20.png",
-    "static/media/black_swan_logo.png": "/carboni-rob/black-swan-data-interview/static/media/black_swan_logo.21233f26.png"
+    "main.css": "/black-swan-data-interview/static/css/main.30e1b4a0.chunk.css",
+    "main.js": "/black-swan-data-interview/static/js/main.cb6a60ba.chunk.js",
+    "main.js.map": "/black-swan-data-interview/static/js/main.cb6a60ba.chunk.js.map",
+    "runtime~main.js": "/black-swan-data-interview/static/js/runtime~main.7a2f10e6.js",
+    "runtime~main.js.map": "/black-swan-data-interview/static/js/runtime~main.7a2f10e6.js.map",
+    "static/css/2.8c467cd4.chunk.css": "/black-swan-data-interview/static/css/2.8c467cd4.chunk.css",
+    "static/js/2.d66f05fd.chunk.js": "/black-swan-data-interview/static/js/2.d66f05fd.chunk.js",
+    "static/js/2.d66f05fd.chunk.js.map": "/black-swan-data-interview/static/js/2.d66f05fd.chunk.js.map",
+    "index.html": "/black-swan-data-interview/index.html",
+    "precache-manifest.3ecf887df7d2a046ecbbfcc730f47021.js": "/black-swan-data-interview/precache-manifest.3ecf887df7d2a046ecbbfcc730f47021.js",
+    "service-worker.js": "/black-swan-data-interview/service-worker.js",
+    "static/css/2.8c467cd4.chunk.css.map": "/black-swan-data-interview/static/css/2.8c467cd4.chunk.css.map",
+    "static/css/main.30e1b4a0.chunk.css.map": "/black-swan-data-interview/static/css/main.30e1b4a0.chunk.css.map",
+    "static/media/Octocat.png": "/black-swan-data-interview/static/media/Octocat.0ba2aa20.png",
+    "static/media/black_swan_logo.png": "/black-swan-data-interview/static/media/black_swan_logo.21233f26.png"
   }
 }
