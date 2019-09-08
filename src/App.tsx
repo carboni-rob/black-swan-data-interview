@@ -5,7 +5,7 @@ import Search from "./Search/Search";
 import Info from "./Info/Info";
 
 const App = (): JSX.Element => {
-  const initialState = { userRepos: [], userData: {} };
+  const initialState = {};
 
   const [store, dispatch] = useReducer(reducer, initialState);
 

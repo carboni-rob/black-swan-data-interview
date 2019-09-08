@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { Redirect } from "react-router-dom";
 import { Button } from "antd";
 import { Context } from "../Store";
-import Card from "./Card/Card";
 import "./Info.css";
 import bsdLogo from "../assets/black_swan_logo.png";
 
@@ -15,6 +14,8 @@ const Info = (): JSX.Element => {
     dispatch({ type: "resetState" });
     setNavigateToSearch(true);
   };
+
+  console.log(userData.orgs);
 
   return (
     <div>
@@ -38,9 +39,54 @@ const Info = (): JSX.Element => {
         <div />
       </nav>
       <main>
-        <Card />
-        <Card />
-        <Card />
+        {userData && (
+          <div className="card">
+            <h2>User Info:</h2>
+            <img
+              src={userData.user.avatar_url}
+              alt="User Avatar"
+              className="userAvatar"
+            />
+            <h3>User name: {userData.user.name || "not set"}</h3>
+            <h3>Company: {userData.user.company || "not set"}</h3>
+            <h3>Email: {userData.user.email || "not set"}</h3>
+            <h3>Followers: {userData.user.followers}</h3>
+            <h3>Following: {userData.user.following}</h3>
+          </div>
+        )}
+        {userRepos && (
+          <div className="card">
+            <h2>User Repositories: {userRepos.length}</h2>
+            <div className="cardContent">
+              {userRepos.map(
+                (repo: any): JSX.Element => {
+                  return (
+                    <a href={repo.clone_url} key={repo.id}>
+                      {repo.name}
+                    </a>
+                  );
+                }
+              )}
+            </div>
+          </div>
+        )}
+        {userData && (
+          <div className="card">
+            <h2>User Organizations:</h2>
+            {userData.orgs.map(
+              (org: any): JSX.Element => {
+                return (
+                  <div className="cardContent" key={org.id}>
+                    <a href={org.url}>
+                      <img alt="" src={org.avatar_url} className="orgAvatar" />
+                      {org.login}
+                    </a>
+                  </div>
+                );
+              }
+            )}
+          </div>
+        )}
       </main>
     </div>
   );
