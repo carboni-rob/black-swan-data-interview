@@ -1,7 +1,9 @@
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1vmax;
+  border-bottom: 2px solid black;
 }
 
 nav .mainPageButton {
@@ -10,4 +12,21 @@ nav .mainPageButton {
 
 .infoPageLogo {
   width: 160px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: black;
+}
+
+.card {
+  width: 300px;
+  height: 500px;
+  margin: 3vmax;
+  border: 2px solid white;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0px 10px 30px 3px rgba(255,255,255,1);
 }

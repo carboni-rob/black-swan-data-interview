@@ -11,8 +11,14 @@
 }
 
 .mainPageLogo {
-  width: 40vmax;
+  width: 30vmax;
   margin-bottom: 5vmax;
+}
+
+.ghLogo {
+  width: 90px;
+  margin-bottom: -10px;
+  z-index: 100;
 }
 
 .mainPageInput {

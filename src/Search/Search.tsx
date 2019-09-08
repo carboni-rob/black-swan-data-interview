@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import { Input, Tooltip, Icon, Button, Modal } from "antd";
 import { getRepos, getUserData } from "../api/github-api";
 import bsdLogo from "../assets/black_swan_logo.png";
+import ghLogo from "../assets/Octocat.png";
 import "./Search.css";
 
 const App: React.FC = (): JSX.Element => {
@@ -41,7 +42,7 @@ const App: React.FC = (): JSX.Element => {
   }
 
   return (
-    <main className="mainPage">
+    <section className="mainPage">
       {searchComplete && <Redirect to="/info" />}
       <img src={bsdLogo} alt="Black Swan Data logo" className="mainPageLogo" />
       <Input
@@ -57,6 +58,7 @@ const App: React.FC = (): JSX.Element => {
           </Tooltip>
         }
       />
+      <img src={ghLogo} alt="GitHublogo" className="ghLogo" />
       <Button
         className="mainPageButton"
         type="primary"
@@ -67,7 +69,7 @@ const App: React.FC = (): JSX.Element => {
       >
         Look it up for me
       </Button>
-    </main>
+    </section>
   );
 };
 

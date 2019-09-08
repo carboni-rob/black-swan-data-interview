@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { Button } from "antd";
+import Card from "./Card/Card";
 import "./Info.css";
 import bsdLogo from "../assets/black_swan_logo.png";
 
@@ -32,7 +33,11 @@ const Info = (): JSX.Element => {
         />
         <div />
       </nav>
-      <h1>TEST</h1>
+      <main>
+        <Card />
+        <Card />
+        <Card />
+      </main>
     </div>
   );
 };
