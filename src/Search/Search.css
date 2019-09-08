@@ -21,6 +21,10 @@
   z-index: 100;
 }
 
+.greyScale {
+  filter: grayscale(100%);
+}
+
 .mainPageInput {
   width: 40vmax;
   margin-bottom: 5vmax;

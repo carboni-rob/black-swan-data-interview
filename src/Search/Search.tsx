@@ -58,7 +58,11 @@ const App: React.FC = (): JSX.Element => {
           </Tooltip>
         }
       />
-      <img src={ghLogo} alt="GitHublogo" className="ghLogo" />
+      <img
+        src={ghLogo}
+        alt="GitHublogo"
+        className={`ghLogo ${isButtonDisabled && "greyScale"}`}
+      />
       <Button
         className="mainPageButton"
         type="primary"
