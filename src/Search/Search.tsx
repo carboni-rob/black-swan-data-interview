@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Redirect } from "react-router-dom";
 import { Input, Tooltip, Icon, Button, Modal } from "antd";
 import { getRepos, getUserData } from "../api/github-api";
 import bsdLogo from "../assets/black_swan_logo.png";
@@ -8,6 +9,7 @@ const App: React.FC = (): JSX.Element => {
   const [isLoading, setIsLoading] = useState(false);
   const [username, setUsername] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [searchComplete, setSearchComplete] = useState(false);
 
   useEffect((): void => {
     if (username.length) {
@@ -17,7 +19,7 @@ const App: React.FC = (): JSX.Element => {
     }
   }, [username]);
 
-  async function handleButtonClick(): Promise<any> {
+  async function searchGitHub(): Promise<any> {
     let userRepos;
     let userData;
 
@@ -25,7 +27,8 @@ const App: React.FC = (): JSX.Element => {
     try {
       userRepos = await getRepos(username);
       userData = await getUserData(username);
-      setIsLoading(false);
+      console.log(userData);
+      setSearchComplete(true);
     } catch (error) {
       Modal.error({
         title: "Sorry but...",
@@ -39,6 +42,7 @@ const App: React.FC = (): JSX.Element => {
 
   return (
     <main className="mainPage">
+      {searchComplete && <Redirect to="/info" />}
       <img src={bsdLogo} alt="Black Swan Data logo" className="mainPageLogo" />
       <Input
         size="large"
@@ -59,7 +63,7 @@ const App: React.FC = (): JSX.Element => {
         size="large"
         disabled={isButtonDisabled}
         loading={isLoading}
-        onClick={(): Promise<any> => handleButtonClick()}
+        onClick={(): Promise<any> => searchGitHub()}
       >
         Look it up for me
       </Button>

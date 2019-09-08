@@ -1,0 +1,13 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vmax;
+}
+
+nav .mainPageButton {
+  width: 120px;
+}
+
+.infoPageLogo {
+  width: 160px;
+}
