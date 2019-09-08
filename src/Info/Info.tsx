@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Redirect } from "react-router-dom";
 import { Button } from "antd";
 import { Context } from "../Store";
+import OrgsCard from "./OrgsCard/OrgsCard";
 import "./Info.css";
 import bsdLogo from "../assets/black_swan_logo.png";
 
@@ -14,6 +15,8 @@ const Info = (): JSX.Element => {
     dispatch({ type: "resetState" });
     setNavigateToSearch(true);
   };
+
+  console.log(userData.orgs);
 
   return (
     <div>
@@ -68,23 +71,7 @@ const Info = (): JSX.Element => {
             </div>
           </div>
         )}
-        {userData && (
-          <div className="card">
-            <h2>User Organizations: {userData.orgs.length}</h2>
-            <div className="cardContent">
-              {userData.orgs.map(
-                (org: any): JSX.Element => {
-                  return (
-                    <a href={org.url} key={org.id}>
-                      <img alt="" src={org.avatar_url} className="orgAvatar" />
-                      {org.login}
-                    </a>
-                  );
-                }
-              )}
-            </div>
-          </div>
-        )}
+        {userData.orgs && <OrgsCard orgs={userData.orgs} />}
       </main>
     </div>
   );
