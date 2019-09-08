@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserCard /> should match last snapshot 1`] = `
+<div
+  class="card"
+>
+  <h2>
+    User Info:
+  </h2>
+  <img
+    alt="User Avatar"
+    class="userAvatar"
+    src="fake/avatar/path"
+  />
+  <h3>
+    User name: 
+    Roberto
+  </h3>
+  <h3>
+    Company: 
+    Black Swan Data
+  </h3>
+  <h3>
+    Email: 
+    carboni@robertocarboi.it
+  </h3>
+  <h3>
+    Followers: 
+    100
+  </h3>
+  <h3>
+    Following: 
+    100
+  </h3>
+</div>
+`;

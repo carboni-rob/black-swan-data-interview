@@ -23,13 +23,10 @@ const App: React.FC = (): JSX.Element => {
   }, [username]);
 
   async function searchGitHub(): Promise<any> {
-    let userRepos;
-    let userData;
-
     setIsLoading(true);
     try {
-      userRepos = await getRepos(username);
-      userData = await getUserData(username);
+      const userRepos = await getRepos(username);
+      const userData = await getUserData(username);
       dispatch({ type: "setUserRepos", payload: userRepos });
       dispatch({ type: "setUserData", payload: userData });
       setSearchComplete(true);
