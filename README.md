@@ -1,3 +1,7 @@
+## App is deployed at
+
+https://carboni-rob.github.io/black-swan-data-interview/#/info
+
 ## To start the app locally
 
 Simply clone the repository, cd in your local folder and run
